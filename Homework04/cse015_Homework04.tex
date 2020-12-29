@@ -1,0 +1,328 @@
+\documentclass[11pt]{article}
+
+% To produce a letter size output. Otherwise will be A4 size.
+\usepackage[letterpaper]{geometry}
+
+% For enumerated lists using letters: a. b. etc.
+\usepackage{enumitem}
+
+\topmargin -.5in
+\textheight 9in
+\oddsidemargin -.25in
+\evensidemargin -.25in
+\textwidth 7in
+
+\begin{document}
+
+% Edit the following putting your first and last names and your lab section.
+\author{Tony Doan\\
+Lab CSE-015-11L }
+
+% Edit the following replacing X with the HW number.
+\title{CSE 015: Discrete Mathematics\\
+Fall 2020\\
+Homework \#4\\
+Solution}
+
+% If you put nothing today's date will be included. Alternatively, uncomment the next line and put the date you want to appear
+\date{October 18, 2020}
+\maketitle
+
+% ========== Begin questions here
+\begin{enumerate}
+\item
+\textbf{Question 1: Set Operations} % Q1 begins
+\begin{enumerate}[label=(\alph*)]
+\item % 1a
+A $\cup$ B \\
+UCM students are either registered in CSE015 or live in Merced county.
+
+\item % 1b
+A $\cap$ C \\
+UCM students are both registered in CSE015 and freshmen.
+
+\item % 1c
+C $\setminus$ B \\
+UCM students who live in Merced county but who are not freshmen.
+
+\item % 1d
+$\overline {A}$ \\
+UCM students who are not registered in CSE015.
+
+\item % 1e
+A $\cap$ B $\cap$ C \\
+UCM students who are registered in CSE015, live in Merced county, and are freshmen.
+\end{enumerate}
+% Q1 end
+
+\item
+\textbf{Question 2: Cartesian Product } % Q2 begins
+\begin{enumerate}[label=(\alph*)]
+\item % 2a
+C $\times$ A \\
+\textit {
+\{("True", 1), ("True", 2), ("True", 3), ("True", 4), ("False", 1), ("False", 2), ("False", 3), ("False", 4)\}
+}
+
+\item % 2b
+B $\times$ B \\
+\textit {
+\{("a", "a"), ("a", "b"), ("a", "c"), ("b", "a"), ("b", "b"), ("b", "c"), ("c", "a"), ("c", "b"), ("c", "c")\}
+}
+
+\item % 2c
+B $\times$ A $\times$ C \\
+\textit {
+\{("a", 1, "True"), ("a", 1, "False"), ("a", 2, "True"), ("a", 2, "False"), ("a", 3, "True"), ("a", 3, "False"), ("a", 4, "True"), ("a", 4, "False"), ("b", 1, "True"), ("b", 1, "True"), ("b", 2, "True"), ("b", 2, "False"), ("b", 3, "True"), ("b", 3, "False"), ("b", 4, "True"), ("b", 4, "False"), ("c", 1, "True"), ("c", 1, "True"), ("c", 2, "True"), ("c", 2, "False"), ("c", 3, "True"), ("c", 3, "False"), ("c", 4, "True"), ("c", 4, "False")\}
+}
+\end{enumerate}
+% Q2 end
+
+\item
+\textbf {Question 3: Composite Cartesian Products } % Q3 begins
+\begin {enumerate} 
+A $\times$ (B $\cup$ C) $\equiv$ (A $\times$ B) $\cup$ (A $\times$ C) \\
+\underline {Proof:} \\
+= A $\times$ (B $\cup$ C) = \{(x, y) $\vline$ x $\in$ A and y $\in$ B $\cup$ C\} \\
+= \{(x, y) $\vline$ ((x, y) $\in$ A $\times$ B) $\cup$ ((x, y) $\in$ A $\times$ C)\} \\
+= (A $\times$ B) $\cup$ (A $\times$ C) \\
+\newline
+True, because if x $\in$ A and y $\in$ B $\cup$ C, there will be (x, y) for either or both A $\times$ B and A $\times$ C.
+\end {enumerate}
+% Q3 end
+
+\item
+\textbf{Question 4: Relations } % Q4 begins
+\begin{enumerate}[label=(\alph*)]
+\item % 4a
+\textit {
+$R_{1}$ = \{(a ,b), (a, c), (a, a), (b, a), (c, a)\} \\
+}
+\begin {tabular} {c|c}
+    \textbf {1} & \textbf {2} \\
+    \hline
+    a & b \\
+    a & c \\
+    a & a \\
+    b & a \\
+    c & a \\
+\end {tabular} \\
+\newline
+\textbf {
+Reflexive:
+} \\
+\textit {
+(a, a) but no (b, b), (c, c), or (d, d) \\
+}
+
+\textbf {
+Symmetric: 
+} \\
+\textit {
+(a, b), (b, a) \\
+(a, c), (c, a) \\
+(a, a) \\
+}
+
+\textbf {
+Anti-Symmetric: 
+} \\
+\textit {
+(a, b), (b, a) \\
+(a, c), (c, a) \\
+(a, a) \\
+If (a, b) were to be swapped to (b, a), it would cause there to be two pairs (b, a), so it can't be anti-symmetric. \\
+}
+
+\textbf {
+Transitive: 
+} \\
+\textit {
+(a, b) to (b, a) to (a, a) \\
+(b, a) to (a, b) but no (b, b) \\
+(c, a) to (a, c) \\
+}
+
+It would be symmetric. \\
+
+\item % 4b
+\textit {
+$R_{2}$ = \{(a, b), (b, b), (b, c), (c, c), (a, c)\} \\
+}
+\begin {tabular} {c|c}
+    \textbf {1} & \textbf {2} \\
+    \hline
+    a & b \\
+    b & b \\
+    b & c \\
+    c & c \\
+    a & c \\
+\end {tabular} \\
+\newline
+\textbf {
+Reflexive: 
+} \\
+\textit {
+There is a (b, b), (c, c) but not (a, a) or (d, d).
+}
+
+\textbf {
+Symmetric: 
+} \\
+\textit {
+(a, b) but no (b, a) \\
+(b, c) but no (c, b) \\
+(a, c) but no (c, a) \\
+}
+
+\textbf {
+Anti-Symmetric: 
+} \\
+\textit {
+The above explanation for symmetric shows that it can be anti-symmetric because if we flip the elements, there are no pairs that match. \\
+}
+
+\textbf {
+Transitive: 
+} \\
+\textit {
+(a, b) to (b, b) to (a, b) \\
+(a, b) to (b, c) to (a, c) \\
+(b, c) to (c, c) to (b, c) \\
+}
+
+It would be both transitive and anti-symmetric. \\
+
+\item % 4c
+\textit {
+$R_{3}$ = \{(a, b), (d, c), (c, a), (c, d), (a, b)\} \\
+}
+\begin {tabular} {c|c}
+    \textbf {1} & \textbf {2} \\
+    \hline
+    a & b \\
+    d & c \\
+    c & a \\
+    c & d \\
+    a & b \\
+\end {tabular} \\
+\newline
+\textbf {
+Reflexive: 
+} \\
+\textit {
+No (a, a), (b, b), (c, c), (d, d) \\
+There are no reflexive pairs. \\
+}
+
+\textbf {
+Symmetric: 
+} \\
+\textit {
+(a, b) but no (b, a) \\
+(d, c) and (c, d) \\
+(c, a) but no (a, c) \\
+(a, b) repeats \\
+}
+
+\textbf {
+Anti-Symmetric: 
+} \\
+\textit {
+(a, b) repeats \\
+}
+
+\textbf {
+Transitive: 
+} \\
+\textit {
+(a, b) but no other elements with b \\
+(d, c) to (c, d) \\
+(c, a) to (a, b) but no (b, c) \\
+}
+
+It would be none of the above because it doesn't fit the criteria. \\
+
+\item % 4d
+\textit {
+$R_{4}$ = \{(a, a), (b, b), (c, c)\} \\
+}
+\begin {tabular} {c|c}
+    \textbf {1} & \textbf {2} \\
+    \hline 
+    a & a \\
+    b & b \\
+    c & c\\
+\end {tabular} \\
+\newline
+\textbf {
+Reflexive: 
+} \\
+\textit {
+There is (a, a), (b, b), (c, c) but no (d, d) \\
+}
+
+\textbf {
+Symmetric: 
+} \\
+\textit {
+All the elements could be swapped and still be the same with no repeats. \\
+}
+
+\textbf {
+Anti-Symmetric: 
+} \\
+\textit {
+All the elements could be swapped and still be the same with no repeats. \\
+}
+
+\textbf {
+Transitive: 
+} \\
+\textit {
+None of them equal each other and transitive can not have an element point to itself, like (a, a). \\
+}
+
+It would be both symmetric and anti-symmetric. \\
+\end {enumerate}
+% Q4 end
+
+\item 
+\textbf {Question 5: Functions } % Q5 begins
+\begin {enumerate} [label = (\alph*)] 
+\item % 5a
+\textit {
+f(m, n) = 2m - n \\
+}
+Surjective, because you set m to 0 and n to any integer, you get (0, n). If you plug in any integer for n, you will get an output no matter what you choose. \\
+
+\item % 5b
+\textit {
+f(m, n) = $m^{2}$ - $n^{2}$ \\
+}
+Not surjective, because it is a perfect square so (m, n) can not equal 2. It can only equal to 1 or greater than 2. \\
+\textit {
+f(1, 0) = $1^{2}$ - $0^{2}$ = 1 - 0 = 1 \\
+f(2, 0) = $2^{2}$ - $0^{2}$ = 4 - 0 = 4 \\
+}
+
+\item % 5c
+\textit {
+f(m, n) = $\left|m\right|$ - $\left|n\right|$ \\
+}
+Surjective, because any integer that is plugged in will have an output of all integers. \\
+
+\item % 5d
+\textit {
+f(m, n) = $m^{2}$ - 4 \\
+}
+Not surjective, because you can not get all the integers. The lowest integer that you can get is -4. \\
+\textit {
+f(0, n) = $0^{2}$ - 4 = 0 - 4 = -4 \\
+f(-1, n) = $-1^{2}$ - 4 = 1 - 4 = -3 \\
+f(1, n) = $1^{2}$ - 4 = 1 - 4 = -3 \\
+}
+\end {enumerate}
+% Q5 end
+\end{enumerate}
+\end{document}

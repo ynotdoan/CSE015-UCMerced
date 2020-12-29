@@ -1,0 +1,224 @@
+\documentclass[11pt]{article}
+
+% To produce a letter size output. Otherwise will be A4 size.
+\usepackage[letterpaper]{geometry}
+
+% For enumerated lists using letters: a. b. etc.
+\usepackage{enumitem}
+
+\topmargin -.5in
+\textheight 9in
+\oddsidemargin -.25in
+\evensidemargin -.25in
+\textwidth 7in
+
+\begin{document}
+
+% Edit the following putting your first and last names and your lab section.
+\author{Tony Doan\\
+Lab CSE-015-11L }
+
+% Edit the following replacing X with the HW number.
+\title{CSE 015: Discrete Mathematics\\
+Fall 2020\\
+Homework \#01\\
+Solution}
+
+% If you put nothing today's date will be included. Alternatively, uncomment the next line and put the date you want to appear
+\date{September 7, 2020}
+\maketitle
+
+% ========== Begin questions here
+\begin{enumerate}
+\item
+\textbf{Question 1:} % Question 1 begin
+\begin{enumerate}[label=(\alph*)]
+\item % 1a
+It is not the case that XYZ is a CSE major.
+
+\item % 1b
+It is not the case that XYZ scored at least 90\% in the labs. 
+
+\item % 1c
+XYZ scored 100\% in the CSE015 final or XYZ scored at least 90\% in the labs which implies XYZ receives an A+ in CSE015.
+
+\item % 1d
+XYZ scored 100\% in the CSE015 final and XYZ scored at least 90\% in the labs which implies XYZ recieves an A+ in CSE015.
+
+\item % 1e
+It is not the case that XYZ is not a CSE major which implies it is not the case that XYZ receives an A+ in CSE015.
+\end{enumerate}
+% Question 1 end
+
+\item
+\textbf{Question 2:} % Question 2 begin
+\begin{enumerate}[label=(\alph*)]
+\item % 2a
+\textbf{p $\oplus$ (q $\lor$ $\lnot$r)} \\
+    \begin{tabular}{c|c|c}
+        \textbf{p q r} & \textbf{q $\lor$ $\lnot$r} & \textbf{p $\oplus$ (q $\lor$ $\lnot$r)}\\
+        \hline
+        F F F & T & T \\
+        F F T & F & F \\
+        \hline
+        F T F & T & T \\
+        F T T & T & T \\
+        \hline
+        T F F & T & F \\
+        T F T & F & T \\
+        \hline
+        T T F & T & F \\
+        T T T & T & F \\
+    \end{tabular} \\
+
+\textbf{} \\
+\textbf{} \\
+\textbf{} \\
+\textbf{} \\
+
+\item % 2b
+\textbf{(p $\lor$ q) $\to$ ($\lnot$r $\lor$ p)} \\
+    \begin{tabular}{c|c|c|c}
+        \textbf{p q r} & \textbf{p $\lor$ q} & \textbf{$\lnot$r $\lor$ p} & \textbf{(p $\lor$ q) $\to$ ($\lnot$r $\lor$ p)} \\
+        \hline
+        F F F & F & T & T \\
+        F F T & F & F & T \\ 
+        \hline
+        F T F & T & T & T \\
+        F T T & T & F & F \\
+        \hline
+        T F T & T & T & T \\
+        T F T & T & T & T \\
+        \hline
+        T T F & T & T & T \\
+        T T T & T & T & T \\
+    \end{tabular}
+
+\item % 2c
+\textbf{((p $\to$ q) $\land$ p) $\to$ q} \\
+    \begin{tabular}{c|c|c|c}
+        \textbf{p q} & \textbf{p $\to$ q} & \textbf{(p $\to$ q) $\land$ p)} & \textbf{((p $\to$ q) $\land$ p) $\to$ q} \\
+        \hline
+        F F & T & F & T \\
+        F T & T & F & T \\
+        \hline
+        T F & F & F & T \\
+        T T & T & T & T \\
+    \end{tabular}
+\end{enumerate}
+% Question 2 end
+
+\item
+\textbf{Question 3:} % Question 3 begins
+\begin{enumerate}[label=(\alph*)]
+\item % 3a
+\textbf{p $\lor$ (q $\land$ r) $\equiv$ (p $\lor$ q) $\land$ (p $\lor$ r)} \\
+    \begin{tabular}{c|c|c||c|c|c|c}
+        \textbf{p q r} & \textbf{q $\land$ r} & \textbf{p $\lor$ (q $\land$ r)} & \textbf{p q r} & \textbf{p $\lor$ q} & \textbf{p $\lor$ r} & \textbf{(p $\lor$ q) $\land$ (p $\lor$ r)} \\
+        \hline
+        F F F & F & F & F F F & F & F & F \\
+        F F T & F & F & F F T & F & T & F \\
+        \hline
+        F T F & F & F & F T F & T & F & F \\
+        F T T & T & T & F T T & T & T & T \\
+        \hline
+        T F F & F & T & T F F & T & T & T \\
+        T F T & F & T & T F T & T & T & T \\
+        \hline
+        T T F & F & T & T T F & T & T & T \\
+        T T T & T & T & T T T & T & T & T \\
+    \end{tabular}
+
+\item % 3b
+\textbf{(p $\to$ q) $\land$ (p $\to$ r) $\equiv$ p $\to$ (q $\land$ r)} \\
+    \begin{tabular}{c|c|c|c||c|c|c}
+        \textbf{p q r} & \textbf{p $\to$ q} & \textbf{p $\to$ r} & \textbf{(p $\to$ q) $\land$ (p $\to$ r)} & \textbf{p q r} & \textbf{q $\land$ r} & \textbf{p $\to$ (q $\land$ r)} \\
+        \hline
+        F F F & T & T & T & F F F & F & T \\
+        F F T & T & T & T & F F T & F & T \\
+        \hline
+        F T F & T & T & T & F T F & F & T \\
+        F T T & T & T & T & F T T & T & T \\
+        \hline
+        T F F & F & F & F & T F F & F & F \\
+        T F T & F & T & F & T F T & F & F \\
+        \hline
+        T T F & T & F & F & T T F & F & F \\
+        T T T & T & T & T & T T T & T & T \\
+    \end{tabular}
+\end{enumerate}
+% Question 3 end
+
+\item
+\textbf{Question 4:} % Question 4 begins
+\begin{enumerate}[label=(\alph*)]
+\item % 4a
+\textbf{p $\to$ (p $\lor$ q)} \\
+    \begin{tabular}{c|c|c}
+        \textbf{p q} & \textbf{p $\lor$ q} & \textbf{p $\to$ (p $\lor$ q)}\\
+        \hline
+        F F & F & T \\
+        F T & T & T \\
+        \hline
+        T F & T & T \\
+        T T & T & T \\
+    \end{tabular}
+\textbf{Tautology}\\
+
+\item % 4b
+\textbf{(p $\land$ q) $\to$ $\lnot$p} \\
+    \begin{tabular}{c|c|c}
+        \textbf{p q} & \textbf{p $\land$ q} & \textbf{(p $\land$ q) $\to$ $\lnot$p} \\
+        \hline
+        F F & F & T \\
+        F T & F & T \\
+        \hline
+        T F & F & T \\
+        T T & T & F \\
+    \end{tabular}
+\textbf{Contingency}\\
+
+\item % 4c
+\textbf{(p $\to$ (q $\lor$ r) $\to$ ($\lnot$q $\lor$ p)}\\
+    \begin{tabular}{c|c|c|c|c}
+        \textbf{p q r} & \textbf{q $\lor$ r} & \textbf{(p $\to$ (q $\lor$ r)} & \textbf{$\lnot$q $\lor$ p} & \textbf{(p $\to$ (q $\lor$ r) $\to$ ($\lnot$q $\lor$ p)} \\
+        \hline
+        F F F & F & T & T & T \\
+        F F T & T & T & T & T \\
+        \hline
+        F T F & T & T & F & F \\
+        F T T & T & T & F & F \\
+        \hline
+        T F F & F & F & T & T \\
+        T F T & T & T & T & T \\
+        \hline
+        T T F & T & T & T & T \\
+        T T T & T & T & T & T \\
+    \end{tabular}
+\textbf{Contingency}\\
+\end{enumerate}
+% Question 4 end
+
+\item
+\textbf{Question 5:} % Question 5 begins
+\begin{enumerate}[label=(\alph*)]
+\item % 5a
+\text{You cannot be late and you cannot smoke.} \\
+    \text{p: You cannot be late} \\
+    \text{q: You cannot smoke} \\
+    \text{$\lnot$(p $\land$ q) $\equiv$ $\lnot$p $\lor$ $\lnot$q} \\
+    \text{} \\
+    \text{It is not the case that you cannot be late or it is not the case that you cannot smoke.} \\
+    
+\item % 5b
+    \text{It is not the case that you can take an annuity and you can take a lump sum.} \\
+    \text{n: you can take an annuity} \\
+    \text{r: you can take a lump sum} \\
+    \text{$\lnot$($\lnot$n $\land$ r) $\equiv$ n $\lor$ $\lnot$r} \\
+    \text{} \\
+    \text{You can take an annuity or it is not the case that you can take a lump sum.} \\
+\end{enumerate}
+% Question 5 end
+
+\end{enumerate}
+\end{document}

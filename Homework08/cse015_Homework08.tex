@@ -1,0 +1,127 @@
+\documentclass[11pt]{article}
+
+% To produce a letter size output. Otherwise will be A4 size.
+\usepackage[letterpaper]{geometry}
+
+% For enumerated lists using letters: a. b. etc.
+\usepackage{enumitem}
+
+\topmargin -.5in
+\textheight 9in
+\oddsidemargin -.25in
+\evensidemargin -.25in
+\textwidth 7in
+
+\begin{document}
+
+% Edit the following putting your first and last names and your lab section.
+\author{Tony Doan \\
+Lab CSE-015-11L }
+
+% Edit the following replacing X with the HW number.
+\title{CSE 015: Discrete Mathematics\\
+Fall 2020\\
+Homework \#08\\
+Solution}
+
+% If you put nothing today's date will be included. Alternatively, uncomment the next line and put the date you want to appear
+\date{December 12, 2020}
+\maketitle
+
+% ========== Begin questions here
+\begin{enumerate}
+\item
+\textbf{Question 1: The Division Algorithm} % Q1 begins
+\begin{enumerate}[label=(\alph*)]
+\item % 1a
+21 div 4 \\
+$\frac{21}{4}$ = 5 remainder 1 \\
+= 5 \\
+
+\item % 1b
+13 mod 5 \\ 
+$\frac{13}{5}$ = 2 remainder 3 \\
+= 3 \\
+
+\item % 1c
+-12 div 5 \\ 
+$\frac{-12}{5}$ = -2 remainder 2 \\
+= -2 \\
+
+\end{enumerate}
+% Q1 ends
+
+\item
+\textbf{Question 2: Modular Arithmetic} \\ % Q2 begins
+m = 13
+\begin{enumerate}[label=(\alph*)]
+\item % 2a
+$4 +_{m} 11$ \\
+(4 + 11) mod 13 \\
+15 mod 13 \\
+= 2 \\
+
+\item % 2b
+$4 \cdot_{m} 11$ \\
+$(4 \cdot 11)$ mod 13 \\
+44 mod 13 \\
+= 5 \\
+
+\item % 2c
+$23 +_{m} 54$ \\
+(23 + 54) mod 13 \\
+77 mod 13 \\
+= 12 \\
+
+\item % 2d
+$7 \cdot_{m} (11 +_{m} 6)$ \\
+$7 \cdot_{m} ((11 + 6)$ mod 13) \\
+$7 \cdot_{m} ((17)$ mod 13) \\
+$7 \cdot_{m} 4$ \\
+$(7 \cdot 4)$ mod 13 \\
+28 mod 13 \\
+= 2 \\
+
+\end{enumerate}
+% Q2 ends
+
+\item
+\textbf{Question 3: Trial Division for Prime Numbers} \\ % Q3 begins
+\\
+The trial division algorithm takes in a number and divides it with a number greater than 1 and checks if the result has a remainder of 0. If the result has a remainder of 0, the program stores that number and takes the result and repeats the first step and divides the result with a number greater than 1 until it finds a result with a remainder of 0. This keeps on repeating until the program returns the result to be 1. All the numbers stored are the factors and can be used to determine if the given number is a composite or prime number.
+\\ \\
+We are given n = 683 \\
+- First we divide 683 by a number greater than 1, so 2: \\
+683/2 = 341 remainder 1 \\
+\\
+- Since the remainder is not 0, we continue and increment the divisor by 1: \\
+683/3 = 227 remainder 2 \\
+\\
+- We continue this process until the result is equal to 1 or the remainder is 0" \\
+\\
+...\\
+\\
+683/683 = 1 remainder 0 \\
+\\
+- This has a remainder of 0 so it is stored into a list and the algorithm is over since the divisor is equal to the dividend. \\
+\\
+Since 1 was the only number stored, the number 683 is a prime number.\\
+
+% Q3 end
+
+\item
+\textbf{Question 4: Shift Cipher} \\ % Q4 begins
+\\
+Given: \\
+message = STUDY FOR THE FINAL \\
+\{A = 0, B = 1, ... , Z = 25, space = 26\} \\
+k = 7 \\
+\\ \\ \\
+Shift alphabet over by 7 to the right, so \{A = 7, B = 8, ... , Z = 5, space = 6\} \\
+\\
+Answer: \{25, 26, 0, 10, 4, 6, 12, 21, 24, 6, 26, 14, 11, 6, 12, 15, 20, 7, 18\}, 25260104612212462614116121520718
+
+% Q4 end
+
+\end{enumerate}
+\end{document}

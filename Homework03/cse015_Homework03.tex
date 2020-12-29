@@ -1,0 +1,219 @@
+\documentclass[11pt]{article}
+
+% To produce a letter size output. Otherwise will be A4 size.
+\usepackage[letterpaper]{geometry}
+
+% For enumerated lists using letters: a. b. etc.
+\usepackage{enumitem}
+\usepackage {proof}
+
+\topmargin -.5in
+\textheight 9in
+\oddsidemargin -.25in
+\evensidemargin -.25in
+\textwidth 7in
+
+\begin{document}
+
+% Edit the following putting your first and last names and your lab section.
+\author{Tony Doan\\
+Lab CSE-015-11L }
+
+% Edit the following replacing X with the HW number.
+\title{CSE 015: Discrete Mathematics\\
+Fall 2020\\
+Homework \#03\\
+Solution}
+
+% If you put nothing today's date will be included. Alternatively, uncomment the next line and put the date you want to appear
+\date{October 5, 2020}
+\maketitle
+
+% ========== Begin questions here
+\begin{enumerate}
+\item
+\textbf{Question 1:} % Q1 begins
+% \begin{enumerate}[label=(\alph*)]
+% \item
+\\
+p: Jane does not fly; q: She is not a bird \\
+$\lnot$p: Jane flies; $\lnot$q: Jane is a bird  \\
+\textit {
+((p $\to$ q) $\land$ $\lnot$q) $\to$ $\lnot$p \\
+}
+Modus Tollens
+% \end{enumerate}
+% Q1 ends
+
+\item
+\textbf{Question 2:} % Q2 begins
+\begin{enumerate}[label=(\alph*)]
+\item % 2a
+p: Bats can fly; q: Bats are mammals \\
+\textit {
+(p $\land$ q) $\to$ q
+} \\
+Simplification
+
+\item % 2b
+p: Pigs are mammals; q: Pigs are birds \\
+\textit {
+((p $\lor$ q) $\land$ $\lnot$q) $\to$ p
+} \\
+Disjunctive Syllogism
+
+\item % 2c
+p: Jack is a CSE major; q: Jack is a freshman \\
+\textit {
+((p) $\land$ (q)) $\to$ (p $\land$ q)
+} \\
+Conjunction
+
+\item % 2d
+p: Mary is a CSE major; q: Mary is a History major\\
+\textit {
+p $\to$ (p $\lor$ q)
+} \\
+Addition
+
+\item % 2e
+p: I go hiking; q: I will sweat a lot; n: I will lose weight \\
+\textit {
+((p $\to$ q) $\land$ (q $\to$ n)) $\to$ (p $\to$ n)
+} \\
+Hypothetical Syllogism
+\end{enumerate}
+% Q2 ends
+
+\item
+\textbf {Question 3: } % Q3 begins
+\begin {enumerate} [label = (\alph*)]
+\item % 3a
+p: It is sunny; q: I will go swimming; $\lnot$p: It is not sunny; $\lnot$q: I will not go swimming \\
+\textit {
+((p $\to$ q) $\land$ $\lnot$p) $\to$ $\lnot$q
+} \\
+This is not correct because there is not a Rule of Inference that matches this argument. There is no option where if p implies q and $\lnot$p then that would imply $\lnot$q.
+
+\item % 2b
+p: It is Sunday; q: I will go to the park; $\lnot$p: It is not Sunday; $\lnot$q: I will not go to the park \\
+\textit {
+((p $\to$ q) $\land$ $\lnot$q) $\to$ $\lnot$p
+} \\
+This is correct because it matches Modus Tollens.
+
+\item % 2c
+p: I will pass the class; q: I score at least a 60\% on the final; $\lnot$p: I will not pass the class; $\lnot$q: I did not score at least a 60\% on the final \\
+\textit {
+((p $\iff$ q) $\land$ $\lnot$q) $\to$ $\lnot$p
+} \\
+It is not correct because there is an "if and only if" statement and none of the Rules of Inference contain that statement. The closest rule this argument resembles is Modus Tollens except it has $\iff$ instead of $\to$.
+\end {enumerate}
+% Q3 ends
+
+\item 
+\textbf {Question 4: } % Q4 begins
+% \begin {enumerate} [label = (\alph*)]
+% \item
+\\
+\textit {
+p $\to$ q $\equiv$ $\lnot$q $\to$ $\lnot$p
+} \\
+"If n is even, then n is an int and $n^{2}$ is even."
+% \end {enumerate}
+% Q4 ends
+
+\item
+\textbf {Question 5: } % Q5 begins
+\\ \\
+\textit {
+(($p_1$ $\lor$ $p_2$) $\lor$ $p_3$) $\to$ q
+} \\
+\begin {tabular} {c|c|c|c|c|c|c} 
+    \textit {$p_1$} & \textit {$p_2$} & \textit {$p_3$} & \textit {q} & \textit {$p_1$ $\lor$ $p_2$} & \textit {($p_1$ $\lor$ $p_2$) $\lor$ $p_3$} & \textit {(($p_1$ $\lor$ $p_2$) $\lor$ $p_3$) $\to$ q} \\
+    \hline
+    F & F & F & F & F & F & T \\
+    F & F & F & T & F & F & T \\
+    \hline
+    F & F & T & F & F & T & F \\
+    F & F & T & T & F & T & T \\
+    \hline
+    F & T & F & F & T & T & F \\
+    F & T & F & T & T & T & T \\
+    \hline 
+    F & T & T & F & T & T & F \\
+    F & T & T & T & T & T & T \\
+    \hline
+    T & F & F & F & T & T & F \\
+    T & F & F & T & T & T & T \\
+    \hline
+    T & F & T & F & T & T & F \\
+    T & F & T & T & T & T & T \\
+    \hline
+    T & T & F & F & T & T & F \\
+    T & T & F & T & T & T & T \\
+    \hline
+    T & T & T & F & T & T & F \\
+    T & T & T & T & T & T & T \\
+\end {tabular} \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\
+\textit {
+($p_1$ $\to$ q) $\land$ ($p_2$ $\to$ q) $\land$ ($p_3$ $\to$ q)
+} \\
+\begin {tabular} {c|c|c|c|c|c}
+    \textit {$p_1$ $\to$ q} & \textit {$p_2$ $\to$ q} & \textit {$p_3$ $\to$ q} & \textit {($p_1$ $\to$ q) $\land$ ($p_2$ $\to$ q)} & \textit {($p_2$ $\to$ q) $\land$ ($p_3$ $\to$ q)} & \textit {($p_1$ $\to$ q) $\land$ ($p_3$ $\to$ q)} \\
+    \hline
+    T & T & T & T & T & T \\
+    T & T & T & T & T & T \\
+    \hline
+    T & T & F & T & F & F \\
+    T & T & T & T & T & T \\
+    \hline
+    T & F & T & F & F & T \\
+    T & T & T & T & T & T \\
+    \hline
+    T & F & F & F & F & F \\
+    T & T & T & T & T & T \\
+    \hline
+    F & T & T & F & T & F \\
+    T & T & T & T & T & T \\
+    \hline
+    F & T & F & F & F & F \\
+    T & T & T & T & T & T \\
+    \hline
+    F & F & T & F & F & F \\
+    T & T & T & T & T & T \\
+    \hline
+    F & F & F & F & F & F \\
+    T & T & T & T & T & T \\
+\end {tabular} \\ \\ \\
+\begin {tabular} {c} 
+    \textit {((($p_1$ $\lor$ $p_2$) $\lor$ $p_3$) $\to$ q) $\iff$ ($p_1$ $\to$ q) $\land$ ($p_2$ $\to$ q) $\land$ ($p_3$ $\to$ q)} \\
+    \hline 
+    T \\
+    T \\
+    \hline
+    T \\
+    T \\
+    \hline
+    T \\
+    T \\
+    \hline
+    T \\
+    T \\
+    \hline
+    T \\
+    T \\
+    \hline
+    T \\
+    T \\
+    \hline
+    T \\
+    T \\
+    \hline
+    T \\
+    T \\
+\end {tabular} \\ \\
+Tautology
+% Q5 ends
+\end{enumerate}
+\end{document}

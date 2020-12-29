@@ -1,0 +1,63 @@
+Tony Doan
+CSE015 - 11L
+
+
+Trial 1:
+  linear_search() times:
+    10^0:  1.1000000000004062e-06 s
+    10^1:  2.3000000000002185e-06 s
+    10^2:  3.900000000001125e-06 s
+    10^3:  3.2600000000000684e-05 s
+    10^4:  0.0003365999999999994 s
+    10^5:  0.003124700000000008 s
+    10^6:  0.033079700000000045 s
+    10^7:  0.38486200000000004 s
+    10^8:  3.392008099999998 s
+
+  binary_search() times:
+    10^0:  2.4999999936881068e-06 s
+    10^1:  1.799999992613266e-06 s
+    10^2:  3.3000000030369847e-06 s
+    10^3:  4.700000005186666e-06 s
+    10^4:  9.099999999762076e-06 s
+    10^5:  8.300000004624053e-06 s
+    10^6:  1.0199999991300501e-05 s
+    10^7:  1.4399999997749546e-05 s
+    10^8:  1.770000000078653e-05 s
+
+  Binary search is slower than linear search.
+
+
+Trial 2:
+  linear_search() times:
+    10^0:  1.000000000001e-06 s
+    10^1:  1.5000000000015001e-06 s
+    10^2:  3.900000000001125e-06 s
+    10^3:  3.250000000000128e-05 s
+    10^4:  0.000335499999999999 s
+    10^5:  0.0036057999999999923 s
+    10^6:  0.07027950000000005 s
+    10^7:  0.39239859999999993 s
+    10^8:  3.663667700000005 s
+
+  binary_search() times:
+    10^0:  2.700000010236181e-06 s
+    10^1:  1.6999999985500835e-06 s
+    10^2:  1.9999999949504854e-06 s
+    10^3:  4.099999998175008e-06 s
+    10^4:  7.400000001211993e-06 s
+    10^5:  1.5099999998824387e-05 s
+    10^6:  9.800000000836917e-06 s
+    10^7:  1.589999999396241e-05 s
+    10^8:  1.760000000672335e-05 s
+
+  Binary search is slower than linear search.
+
+
+Linear search has a time complexity of O(n) while binary search has a time 
+complexity of O(logn). This is because linear search goes through each 
+index while binary search cuts out half of the list that is not needed. In 
+both trials, I got that binary search was slower at finding k in list s than 
+linear search. 
+I found this confusing because I thought binary search would faster since it 
+finds a midpoint and uses the half where k is in.

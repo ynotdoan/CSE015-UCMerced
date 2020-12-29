@@ -1,0 +1,144 @@
+\documentclass[11pt]{article}
+
+% To produce a letter size output. Otherwise will be A4 size.
+\usepackage[letterpaper]{geometry}
+
+% For enumerated lists using letters: a. b. etc.
+\usepackage{enumitem}
+
+\topmargin -.5in
+\textheight 9in
+\oddsidemargin -.25in
+\evensidemargin -.25in
+\textwidth 7in
+
+\begin{document}
+
+% Edit the following putting your first and last names and your lab section.
+\author{Tony Doan\\
+Lab CSE-015-11L }
+
+% Edit the following replacing X with the HW number.
+\title{CSE 015: Discrete Mathematics\\
+Fall 2020\\
+Homework \#07\\
+Solution}
+
+% If you put nothing today's date will be included. Alternatively, uncomment the next line and put the date you want to appear
+\date{November 28, 2020}
+\maketitle
+
+% ========== Begin questions here
+\begin{enumerate}
+\item
+\textbf{Question 1: Asymptotic Notation} \\ \\ % Q1 begins
+g(n) = O($n^{2}$)
+\begin{enumerate}[label=(\alph*)]
+\item % 1a
+f(n) = 178n + 45 \\ 
+The largest term is 178n \\
+Using the rule for O(n) that states f(n) must be less than or equal to g(n) [f(n) $\leq$ g(n)],
+we see in this problem that O(n) $\leq$ O($n^{2}$) is true. \\
+Therefore, the answer would be yes, because n increases slower than $n^{2}$. \\
+\item % 1b
+f(n) = nlogn + 12 \\
+The largest term is nlogn \\
+Using the rule for O(n) that states f(n) must be less than or equal to g(n) [f(n) $\leq$ g(n)],
+we see in this problem that O(logn) $\leq$ O($n^{2}$) is true. \\
+Therefore, the answer would be yes, because logn increases slower than $n^{2}$. \\
+\item % 1c
+f(n) = 34$n^{2}$ + 34n + 34 \\
+The largest term is 34$n^{2}$ \\
+Using the rule for O(n) that states f(n) must be less than or equal to g(n) [f(n) $\leq$ g(n)],
+we see in this problem that O($n^{2}$) $\leq$ O($n^{2}$) is true. \\
+Therefore, the answer would be yes, because $n^{2}$ increases at the same rate as $n^{2}$. \\
+\item % 1d
+f(n) = $\sqrt{n}$ + 2 \\
+The largest term is $\sqrt{n}$, or $n^{\frac{1}{2}}$ \\
+Using the rule for O(n) that states f(n) must be less than or equal to g(n) [f(n) $\leq$ g(n)],
+we see in this problem that O($n^{\frac{1}{2}}$) $\leq$ O($n^{2}$) is true. \\
+Therefore, the answer would be yes, because $n^{\frac{1}{2}}$ increases slower than $n^{2}$. \\
+\item % 1e
+f(n) = 0.001$n^{3}$ + 72n \\
+The largest term is 0.001$n^{3}$ \\
+Using the rule for O(n) that states f(n) must be less than or equal to g(n) [f(n) $\leq$ g(n)],
+we see in this problem that O($n^{3}$) $\leq$ O($n^{2}$) is false. \\
+Therefore, the answer would be no, because $n^{3}$ increases faster than $n^{2}$. \\
+\end{enumerate}
+% Q1 end
+
+\item
+\textbf{Question 2: Asymptotic Notation} \\ \\ % Q2 begins
+In order from the top being number 1, or increasing fastest, to bottom being number 9, or increasing slowest. 
+\begin{itemize}
+\item % 1
+logn 
+\item % 2
+$\sqrt{n}$ 
+\item % 3
+nlogn 
+\item % 4
+n
+\item % 5
+$n^{2}$logn 
+\item % 6
+$n^{2}$ 
+\item % 7
+$n^{4}$ 
+\item % 8
+$2^{n}$ 
+\item % 9
+$3^{n}$ 
+\end{itemize}
+% Q2 end
+
+\item
+\textbf{Question 3: Asymptotic Growth} % Q3 begins
+\begin{itemize}
+\item % time complexities
+$f_{1}$(n) = 5$n^{2}$ + 34n + 12
+\item
+$f_{2}$(n) = 10n + 4
+\item 
+$f_{3}$(n) = $2^{n}$
+\\ \\
+\textbf{Computer A: } \\
+Converting $10^{6}$ operations per second to operations per hour: $10^{9}$ \\
+\\
+$f_{1}$(n) = 5$n^{2}$ + 34n + 12 $\leq$ 3.6 * $10^{9}$ \\
+Solving for n: \\
+n = 26829.42 \\
+Computer A can perform 26829.42 operations per hour for $f_{1}$. \\
+\\
+$f_{2}$(n) = 10n + 4 $\leq$ 3.6 * $10^{9}$ \\
+Solving for n: \\
+n = 359999999.6 \\
+Computer A can perform 359999999.6 operations per hour for $f_{2}$. \\
+\\
+$f_{3}$(n) = $2^{n}$ $\leq$ 3.6 * $10^{9}$ \\
+Solving for n: \\
+n = 31.75 \\
+Computer A can perform 31.75 operations per hour for $f_{3}$. \\
+\\
+\textbf{Computer B: } \\
+Converting $10^{8}$ operations per second to operations per hour: $10^{11}$ \\
+\\
+$f_{1}$(n) = 5$n^{2}$ + 34n + 12 $\leq$ 3.6 * $10^{11}$ \\
+Solving for n: \\
+n = 268324.76 \\
+Computer B can perform 268324.76 operations per hour for $f_{1}$. \\
+\\
+$f_{2}$(n) = 10n + 4 $\leq$ 3.6 * $10^{11}$ \\
+Solving for n: \\
+n = 35999999999.6 \\
+Computer B can perform 35999999999.6 operations per hour for $f_{2}$. \\
+\\
+$f_{3}$(n) = $2^{n}$ $\leq$ 3.6 * $10^{11}$ \\
+Solving for n: \\
+n = 38.39 \\
+Computer B can perform 38.39 operations per hour for $f_{3}$. \\
+\\
+\end{itemize}
+% Q3 end
+\end{enumerate}
+\end{document}

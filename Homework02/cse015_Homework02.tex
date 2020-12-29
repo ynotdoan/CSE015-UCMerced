@@ -1,0 +1,184 @@
+\documentclass[11pt]{article}
+
+% To produce a letter size output. Otherwise will be A4 size.
+\usepackage[letterpaper]{geometry}
+
+% For enumerated lists using letters: a. b. etc.
+\usepackage{enumitem}
+
+\topmargin -.5in
+\textheight 9in
+\oddsidemargin -.25in
+\evensidemargin -.25in
+\textwidth 7in
+
+\begin{document}
+
+% Edit the following putting your first and last names and your lab section.
+\author{Tony Doan\\
+Lab CSE-015-11L }
+
+% Edit the following replacing X with the HW number.
+\title{CSE 015: Discrete Mathematics\\
+Fall 2020\\
+Homework \#02\\
+Solution}
+
+% If you put nothing today's date will be included. Alternatively, uncomment the next line and put the date you want to appear
+\date{September 20, 2020}
+\maketitle
+
+% ========== Begin questions here
+\begin{enumerate}
+
+\item %Q1 begins
+\textbf{Question 1:}
+\begin{enumerate}[label=(\alph*)]
+\item %1a
+\textit {
+P(2), x $<$ x$^{3}$ \\ 
+(2 $<$ 2$^{3}$) = (2 $<$ 8) \\
+}
+True, because 2 is less than 8.
+
+\item %1b
+\textit {
+P(-1), x $<$ x$^{3}$ \\
+(-1 $<$ -1$^{3}$) = (-1 $<$ -1) \\
+}
+False, because -1 is not less than -1. They are equal.
+
+\item %1c
+\textit {
+$\forall$xP(x), x $<$ x$^{3}$ \\
+P(0): (0 $<$ 0$^{3}$) = (0 $<$ 0) \\
+P(-4): (-4 $<$ -4$^{3}$) = (-4 $<$ -64) \\
+}
+False, because \textit{P(x)} where \textit{x} is equal to 1 or less is false, so it can't all be true.
+
+\item %1d
+\textit {
+$\exists$xP(x), x $<$ x$^{3}$ \\
+P(4): (4 $<$ 4$^{3}$) = (4 $<$ 64) \\
+}
+True because \textit{P(4)} is one example of it being true.
+
+\item %1e
+\textit{
+$\exists!$xP(x), x $<$ x$^{3}$ \\
+P(4): (4 $<$ 4$^{3}$) = (4 $<$ 64) \\
+P(2): (2 $<$ 2$^{3}$) = (2 $<$ 8) \\
+}
+False, because \textit{P(x)} where \textit{x} is equal to 2 or greater is true, so there is more than one outcome where it will be true.
+\end{enumerate}
+%Q1 ends
+
+\item %Q2 begins
+\textbf{Question 2:}
+\begin{enumerate}[label=(\alph*)]
+\item %2a
+\textit {$\lnot\forall$x(S(m) $\land$ M(x))}
+
+\item %2b
+\textit {$\forall$x(S(m) $\lor$ M(x))}
+
+\item %2c
+\textit {$\exists$x(S(x) $\land$ $\lnot$M(x))}
+\end{enumerate}
+%Q2 ends
+
+\item %Q3 begins
+\textbf {Question 3: }
+\begin {enumerate} [label = (\alph*)]
+\item %3a
+\textit {$\forall$x(A(x) $\land$ B(x)) $\equiv$ $\forall$(A(x) $\to$ B(x)) \\}
+\\ \\
+\textit {$\forall$x(A(x) $\land$ B(x)): \\}
+    \begin {tabular}{c|c|c|c}
+        \textbf {A(x)} & \textbf {B(x)} & \textbf {A(x) $\land$ B(x)} & \textbf {$\forall$x(A(x) $\land$ B(x))} \\
+        \hline
+        F & F & F & F \\
+        F & T & F & F \\
+        \hline
+        T & F & F & F \\
+        T & T & T & T \\
+    \end{tabular} 
+\textbf {$\forall$x(A(x) $\land$ B(x)) is false} \\ \\
+\textit {$\forall$(A(x) $\to$ B(x)): \\}
+    \begin {tabular} {c|c|c|c}
+        \textbf {A(x)} & \textbf {B(x)} & \textbf {A(x) $\to$ B(x)} & \textbf {$\forall$(A(x) $\to$ B(x))} \\
+        \hline
+        F & F & T & T \\
+        F & T & T & T \\
+        \hline
+        T & F & F & F \\
+        T & T & T & T \\
+    \end {tabular}
+\textbf {$\forall$(A(x) $\to$ B(x) is false} \\ \\
+\textbf {Both statements are logically equivalent because all the outcomes contain one or more false statements, therefore making them both false.}
+\end {enumerate}
+%Q3 ends
+
+\item %Q4 begins
+\textbf {Question 4: }
+\begin {enumerate} [label = (\alph*)] 
+\item %4a 
+\textit {$\exists$x$\forall$yA(x,y)} \\
+There exists a real number x for every real number y that xy = 0. \\
+(1)(0) = 0 \\
+(1)(1) = 1 \\
+False
+
+\item %4b
+\textit {$\exists$x$\exists$yB(x,y)} \\
+There exists a real number x for a real number y that x + y = 0. \\
+-4 + 4 = 0 \\
+True 
+
+\item %4c
+\textit {$\forall$x$\exists$yA(x,y)} \\
+For every real number x, there exists a real number y that xy = 0. \\
+(1)(0) = 0 \\
+(2)(0) = 0 \\
+True
+
+\item %4d
+\textit {$\exists$x$\forall$y(A(x,y) $\land$ B(x,y))} \\
+There exists a real number x for all real numbers y that xy = 0 and x + y = 0. \\
+(0)(1) = 0 and 0 + 1 = 1 \\
+False
+
+\item %4e
+\textit {$\exists$x$\exists$y(A(x,y) $\land$ $\lnot$B(x,y))} \\
+There exists a real number x for a real number y that xy = 0 and x + y $\neq$ 0. \\
+(4)(0) = 0 and 4 + 0 $\neq$ 0 \\
+True
+\end {enumerate}
+%Q4 ends
+
+\item %Q5 begins
+\textbf {Question 5: }
+\begin {enumerate} [label = (\alph*)]
+\item %5a
+\textit {
+$\lnot$$\exists$x$\exists$y(P(x) $\to$ Q(y)) \\
+P(y) = $\exists$y(P(x) $\to$ Q(y)), so $\lnot$$\exists$xP(y) \\
+$\lnot$$\exists$xP(y) $\equiv$ $\forall$x$\lnot$P(y) \\
+$\lnot$P(y) = $\lnot$$\exists$y(P(x) $\to$ Q(y)), so $\forall$y$\lnot$(P(x) $\to$ Q(y)) \\
+Answer: $\forall$x$\forall$y($\lnot$P(x) $\to$ $\lnot$Q(y))
+} 
+
+\item %5b
+\textit {$\lnot$$\exists$y($\exists$xA(x,y) $\lor$ $\forall$xB(x,y)) \\
+N(x) = $\exists$xA(x,y); S(x) = $\forall$xB(x,y), so $\lnot$$\exists$y(N(x) $\lor$ S(x)) \\
+$\lnot$$\exists$y(N(x) $\lor$ S(x) $\equiv$ $\forall$y$\lnot$(N(x) $\land$ S(x)) \\
+$\lnot$(N(x) $\land$ S(x)) $\equiv$ ($\lnot$$\exists$xA(x,y) $\land$ $\lnot$$\forall$xB(x,y)) \\
+($\lnot$$\exists$xA(x,y) $\land$ $\lnot$$\forall$xB(x,y)) $\equiv$ ($\forall$x$\lnot$A(x,y) $\land$ $\exists$x$\lnot$B(x,y)) \\
+Answer: $\forall$y($\forall$x$\lnot$A(x,y) $\land$ $\exists$x$\lnot$B(x,y))}
+
+\end {enumerate}
+%Q5 ends
+
+\end{enumerate}
+
+\end{document}
